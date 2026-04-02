@@ -1,0 +1,9 @@
+{
+  "name": "contract-review",
+  "description": "Contract risk analysis for professionals — upload a contract, get clause-by-clause risk scoring, missing clause detection, contradiction checks, and revision suggestions. Built for lawyers, accountants, and business professionals.",
+  "version": "1.0.0",
+  "author": {
+    "name": "HS Lee",
+    "url": "https://github.com/Ark-Point"
+  }
+}
