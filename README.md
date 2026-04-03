@@ -62,6 +62,22 @@ If you do not want to install a skill, use the portable prompt in:
 
 - `prompts/contract-review-portable-prompt.md`
 
+## Optional MCP Integration
+
+If you use `korean-law-mcp`, this plugin becomes much more reliable for legal source retrieval.
+
+Recommended use:
+
+- use `korean-law-mcp` first for statute text, case lookup, and current-law checks
+- use web search only as a fallback when the MCP server is unavailable or incomplete
+
+Best fit:
+
+- applicable law mapping
+- mandatory-law checks
+- precedent lookup
+- current validity verification
+
 ## Usage
 
 ```
@@ -108,6 +124,7 @@ After analysis, choose your format:
 - **분쟁 시나리오** — "이 조항대로 가다가 터지면 어떻게 되는가" 시뮬레이션
 - **집행 가능성** — "법원에서 실제로 인정될 가능성" 판단 (판례 경향 포함)
 - **전문가형 근거 표기** — 결론, 판단 기준, 원천 소스, 불확실성을 분리해 제시
+- **Lite 기본 / Deep 선택** — 기본은 짧고, 고위험 항목만 필요 시 깊게 확장
 
 ### 전문가형 근거 표기
 
@@ -146,6 +163,15 @@ claude plugin add hslee-byte/claude-contract-review-plugin
 
 - `prompts/contract-review-portable-prompt.md`
 
+### 선택적 MCP 연동
+
+`korean-law-mcp`를 함께 쓰면 법령 원문, 판례 검색, 최신성 확인 쪽 신뢰도가 더 올라갑니다.
+
+권장 방식:
+
+- 법령/판례/현행성 확인은 `korean-law-mcp` 우선
+- MCP 서버가 없거나 부족한 경우에만 웹검색 fallback
+
 ### 사용법
 
 ```
@@ -164,6 +190,11 @@ claude plugin add hslee-byte/claude-contract-review-plugin
 3. **검토 의견서** — 내부 보고용 (법령 근거, 분쟁 시나리오 포함)
 4. **협상 포인트** — 미팅 전 체크리스트 (양보 가능/불가 구분)
 
+### 분석 깊이
+
+- **Lite (기본)** — 요약표 + 고위험 항목 중심 + 최소 질문
+- **Deep** — 판례 경향, 분쟁 시나리오, 수정안까지 상세 확장
+
 ### 리스크 등급
 
 | 등급 | 의미 |
@@ -179,6 +210,7 @@ claude plugin add hslee-byte/claude-contract-review-plugin
 - 확정적 법률 판단을 내리지 않음 — 가능성과 법적 근거를 제시
 - 핵심 결론에는 판단 기준과 원천 소스를 분리해 표기
 - 계약서 원문, 당사자 정보는 절대 기억/저장하지 않음
+- 기본은 Lite로 시작하고, ⚫/🔴 등 고위험 항목만 Deep으로 확장
 
 ## License
 

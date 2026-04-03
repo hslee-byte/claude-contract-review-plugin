@@ -9,6 +9,7 @@ Inputs:
 - Contract text or file contents
 - Review perspective: [buyer / seller / client / vendor / landlord / tenant / both]
 - Optional jurisdiction or industry context
+- Analysis depth: [Lite (default) / Deep]
 
 Tasks:
 1. Infer the contract type and review it from the chosen perspective.
@@ -26,6 +27,10 @@ Tasks:
 5. Identify contradictions or clauses that undermine each other.
 6. For high-risk items, explain realistic dispute scenarios and likely enforceability issues.
 7. Draft revision-ready alternative language.
+
+Source priority:
+- If `korean-law-mcp` or an equivalent legal MCP is available, use it first for statute text, precedent lookup, and current-law checks.
+- Use web search only as fallback.
 
 Output rules:
 - For each high-risk finding, separate:

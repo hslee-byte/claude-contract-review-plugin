@@ -31,6 +31,17 @@ Use this skill when the user wants clause-by-clause contract risk analysis from 
    - clauses that formally grant a right but practically neutralize it
 6. Produce revision-ready wording for high-risk items.
 
+## Mode
+
+- Default to `Lite`
+- Switch to `Deep` when the user asks for detailed analysis, precedent trend, or revision drafting
+- In `Lite`, minimize clarification questions and focus on high-risk findings
+
+## Source Priority
+
+- If `korean-law-mcp` is available, use it first for statutes, precedents, and current-law checks
+- Use web search only as fallback
+
 ## Output Rules
 
 For each high-risk finding, separate:
